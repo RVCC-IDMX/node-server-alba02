@@ -5,10 +5,13 @@ const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((request, response) => {
   response.statusCode = 200;
-  response.setHeader('Content-Type', 'test/plain');
+  response.setHeader('Content-Type', 'text/plain');
   response.end('Hello World');
 });
 
 server.listen(PORT, HOSTNAME, () => {
   console.log(`Server running at http://${HOSTNAME}:${PORT}/`);
 });
+
+console.log(__filename);
+console.log(__dirname);
