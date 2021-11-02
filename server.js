@@ -1,4 +1,4 @@
-const http = require('http');
+/*const http = require('http');
 
 const HOSTNAME = process.env.HOSTNAME || 'localhost';
 const PORT = process.env.PORT || 3000;
@@ -35,3 +35,8 @@ unlink('hello.txt', (err) =>{
   }
   console.log('File deleted!')
 });
+*/
+import { addNums } from "./addNums.js";
+
+const sum = addNums(2,2);
+console.log(sum);
