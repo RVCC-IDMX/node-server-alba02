@@ -26,14 +26,12 @@ try {
 }
 console.log('Log from outside');
 
-const {appendFile} = require("fs");
+const {unlink} = require("fs");
 
-const newContent = '\nThis is some more new text';
-
-appendFile('hi.text',newContent, (err) =>{
+unlink('hello.txt', (err) =>{
   if (err){
     console.error(err)
-    return
+    return;
   }
-  console.log('Content written!')
-})
+  console.log('File deleted!')
+});
