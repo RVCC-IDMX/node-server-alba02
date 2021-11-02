@@ -1,42 +1,11 @@
-/*const http = require('http');
+const http = require('http');
 
-const HOSTNAME = process.env.HOSTNAME || 'localhost';
 const PORT = process.env.PORT || 3000;
 
-const server = http.createServer((request, response) => {
-  response.statusCode = 200;
-  response.setHeader('Content-Type', 'text/plain');
-  response.end('Hello World');
-});
+const server = http.createServer((req, res)=>{
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+  res.end("<h1>Hello World</h1>");
+})
 
-server.listen(PORT, HOSTNAME, () => {
-  console.log(`Server running at http://${HOSTNAME}:${PORT}/`);
-});
-
-console.log(__filename);
-console.log(__dirname);
-
-const { readFile, readFileSync } = require('fs');
-
-try {
-  const data = readFileSync('hi.text', 'utf-8');
-  console.log(data);
-} catch (err) {
-  console.error(err);
-}
-console.log('Log from outside');
-
-const {unlink} = require("fs");
-
-unlink('hello.txt', (err) =>{
-  if (err){
-    console.error(err)
-    return;
-  }
-  console.log('File deleted!')
-});
-*/
-import { addNums } from "./addNums.js";
-
-const sum = addNums(2,2);
-console.log(sum);
+server.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
