@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "Alba Maldonado <300293486@stu.raritanval.edu> (https://github.com/albamaldonado)",
   "license": "MIT",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/RVCC-IDMX/node-server-alba02/issues"
   },
