@@ -18,8 +18,8 @@ let path = "./";
       res.statusCode = 200;
       break;
     default:
-      path += "404.html";
-      res.statusCode = 404;
+      res.setHeader("Location", "/")
+      res.statusCode = 301;
       break;
   }
 
