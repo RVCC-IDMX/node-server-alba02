@@ -25,3 +25,15 @@ try {
   console.error(err);
 }
 console.log('Log from outside');
+
+const {appendFile} = require("fs");
+
+const newContent = '\nThis is some more new text';
+
+appendFile('hi.text',newContent, (err) =>{
+  if (err){
+    console.error(err)
+    return
+  }
+  console.log('Content written!')
+})
